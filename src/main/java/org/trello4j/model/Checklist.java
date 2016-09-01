@@ -5,29 +5,28 @@ import java.util.List;
 
 /**
  * A Trello checklist.
- * 
+ * <p>
  * <code>
- *  {
- *    "id":"4f92b89ea73738db6cdd4ed7",
- *    "name":"Checklist",
- *    "idBoard":"4f92b80ba73738db6cdd4309",
- *    "checkItems":[
- *      {
- *        "id":"4f92b97cf9e2e2ae362df9ab",
- *        "name":"Base for filtering",
- *        "type":"check",
- *        "pos":8588
- *      },
- *      {
- *        "id":"4f92b99b5c92e5cd28006ee8",
- *        "name":"GET /1/boards/[board_id]/actions?filter",
- *        "type":"check",
- *        "pos":12882
- *       }
- *    ]
- *  }
+ * {
+ * "id":"4f92b89ea73738db6cdd4ed7",
+ * "name":"Checklist",
+ * "idBoard":"4f92b80ba73738db6cdd4309",
+ * "checkItems":[{
+ * 		"state": "incomplete",
+ * 		"id": "4eea6af1a5da7f5a490000cc",
+ * 		"name": "Figure out how to use the call",
+ * 		"nameData": null,
+ * 		"pos": 33544
+ * }, {
+ * 		"state": "incomplete",
+ * 		"id": "4eea6af4a5da7f5a490000e1",
+ * 		"name": "Add it to the code",
+ * 		"nameData": null,
+ * 		"pos": 50647
+ * }
+ * ]
+ * }
  * </code>
- * 
  */
 public class Checklist extends TrelloObject {
 
@@ -64,12 +63,12 @@ public class Checklist extends TrelloObject {
 	public class CheckItem extends TrelloObject {
 
 		private String name;
-        private String type;
-        private String state;
-        private double pos;
+		private String type;
+		private String state;
+		private double pos;
 
 
-        public String getName() {
+		public String getName() {
 			return name;
 		}
 
@@ -85,7 +84,7 @@ public class Checklist extends TrelloObject {
 			this.type = type;
 		}
 
-        public double getPos() {
+		public double getPos() {
 			return pos;
 		}
 
@@ -93,16 +92,16 @@ public class Checklist extends TrelloObject {
 			this.pos = pos;
 		}
 
-        public String getState() {
-            return state;
-        }
+		public String getState() {
+			return state;
+		}
 
-        public void setState(String state) {
-            this.state = state;
-        }
+		public void setState(String state) {
+			this.state = state;
+		}
 
-        public boolean isChecked() {
-            return "complete".equals(state);
-        }
-    }
+		public boolean isChecked() {
+			return "complete".equals(state);
+		}
+	}
 }
