@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/MaikWezinkhof/trello4j.svg)](https://jitpack.io/#MaikWezinkhof/trello4j)
+
 ## Introduction
 **trello4j** is a java wrapper around [Trello API](https://trello.com/docs/api/index.html).
 
@@ -9,32 +11,18 @@ Please report any issues and/or participate in the development [here](https://tr
 
 ### Get trello4j from unofficial maven repo
 
-    <repository>
-	    <id>joelso-mvn-repo</id>
-	    <name>joelso github mvn repo</name>
-	    <url>https://raw.github.com/joelso/joelso-mvn-repo/master/snapshots/</url>
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+		</repository>
 	</repository>
-	
 	...
-	
 	<dependency>
-	    <groupId>org.trello4j</groupId>
+		<groupId>com.github.MaikWezinkhof</groupId>
 		<artifactId>trello4j</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.2</version>
 	</dependency>
 	
-
-### Get source and build it
-
-    git clone git@github.com:joelso/trello4j.git
-	cd trello4j
-	mvn install
-
-Now you got two options:
-
-1. Use trello4j from your local maven repo, add dependency groupId: org.trello4j / artifactId: trello4j
-2. Use jar that was built in directory **target/**
-
 ## Usage
 	
 	// myToken is optional, set to null if you are accessing public data
@@ -215,15 +203,3 @@ Now you got two options:
 ## Contributors
 
 [skydjol](https://github.com/skydjol)<br>[tanmoy-guha](https://github.com/tanmoy-guha)
-
-
-	
-
-	
-	
-
-
-
-
-
-
